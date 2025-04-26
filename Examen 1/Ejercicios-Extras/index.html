@@ -9,120 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="nav-ejercicios">
-        <a href="index.html">Ejercicio 1</a>
-        <a href="ejercicio2.html">Ejercicio 2</a>
-        <a href="ejercicio3.html">Ejercicio 3</a>
-        <a href="ejercicio4.html">Ejercicio 4</a>
-        <a href="ejercicio4.html">Ejercicio 5</a>
-        <a href="ejercicio4.html">Ejercicio 6</a>
-        <a href="ejercicio4.html">Ejercicio 7</a>
-        <a href="ejercicio4.html">Ejercicio 8</a>
-    </nav>
-
-    <!--
-    Ejercicio 1 (cronómetro, cada vez que digo setTimeout, me refiero a setInterval )
-    Realizar un cronómetro con 3 botones:
-    Iniciar
-    Pausar
-    Resetear
-    -->
-    <div class="container">
-        <h1>Cronómetro</h1>
-        <div class="cronometro">
-            <span id="minutos">00</span>:<span id="segundos">00</span>:<span id="centesimas">00</span>
-        </div>
-        <div class="botones">
-            <button id="iniciar"><i class="fas fa-play"></i></button>
-            <button id="pausar"><i class="fas fa-pause"></i></button>
-            <button id="resetear"><i class="fas fa-redo"></i></button>
-        </div>
+    <div class="card-nav">
+        <nav class="nav-ejercicios">
+            <a href="Ejercicio1/ejercicio1.html"><i class="fa-solid fa-clock"></i> Ejercicio 1</a>
+            <a href="Ejercicio2/ejercicio2.html"><i class="fa-solid fa-user"></i> Ejercicio 2</a>
+            <a href="Ejercicio3/ejercicio3.html"><i class="fa-solid fa-list"></i> Ejercicio 3</a>
+            <a href="Ejercicio4/ejercicio4.html"><i class="fa-solid fa-file-lines"></i> Ejercicio 4</a>
+            <a href="Ejercicio5/ejercicio5.html"><i class="fa-solid fa-palette"></i> Ejercicio 5</a>
+        </nav>
     </div>
-
-    <script>
-        // Obtenemos los elementos del DOM
-        const minutos = document.getElementById('minutos');
-        const segundos = document.getElementById('segundos');
-        const centesimas = document.getElementById('centesimas');
-        const iniciar = document.getElementById('iniciar');
-        const pausar = document.getElementById('pausar');
-        const resetear = document.getElementById('resetear');
-        
-        // controlar el cronómetro
-        let intervalId = null; // ID del intervalo
-        let min = 0;
-        let seg = 0;
-        let cent = 0;
-        let corriendo = false; // siempre inicia en false
-        
-        // Función para formatear números menores a 10 (añadir un cero delante)
-        function formatearNumero(numero) {
-            return numero < 10 ? '0' + numero : numero;
-        }
-        
-        // Función para actualizar la visualización del cronómetro
-        function actualizarCronometro() {
-            // Incrementamos las centésimas
-            cent++;
-            
-            // Si las centésimas llegan a 100, incrementamos los segundos
-            if (cent === 100) {
-                cent = 0;
-                seg++;
-                
-                // Si los segundos llegan a 60, incrementamos los minutos
-                if (seg === 60) {
-                    seg = 0;
-                    min++;
-                }
-            }
-            
-            // Actualizamos la visualización con los valores formateados
-            // llamamos la funcion formatear numero + el parametro cent, seg, min
-            centesimas.textContent = formatearNumero(cent);
-            segundos.textContent = formatearNumero(seg);
-            minutos.textContent = formatearNumero(min);
-        }
-        
-        // Función para iniciar el cronómetro
-        function iniciarCronometro() {
-            // Solo iniciamos si no está corriendo ya
-            if (!corriendo) {
-                // Establecemos un intervalo que se ejecuta cada 10 milisegundos (1 centésima)
-                intervalId = setInterval(actualizarCronometro, 10);
-                corriendo = true;
-            }
-        }
-        
-        // Función para pausar el cronómetro
-        function pausarCronometro() {
-            // Detenemos el intervalo y marcamos como no corriendo
-            clearInterval(intervalId);
-            corriendo = false;
-        }
-        
-        // Función para resetear el cronómetro
-        function resetearCronometro() {
-            // Detenemos el intervalo
-            clearInterval(intervalId);
-            
-            // Reiniciamos las variables
-            min = 0;
-            seg = 0;
-            cent = 0;
-            corriendo = false;
-            
-            // Actualizamos la visualización
-            centesimas.textContent = '00';
-            segundos.textContent = '00';
-            minutos.textContent = '00';
-        }
-        
-        // Asignamos los eventos a los botones
-        iniciar.addEventListener('click', iniciarCronometro);
-        pausar.addEventListener('click', pausarCronometro);
-        resetear.addEventListener('click', resetearCronometro);
-    </script>
-
 </body>
 </html>

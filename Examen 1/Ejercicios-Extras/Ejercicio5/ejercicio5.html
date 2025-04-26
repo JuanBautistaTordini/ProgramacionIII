@@ -1,0 +1,38 @@
+<!--Ejercicio 5 (cambiar color de fondo con 3 barras de rangos)
+El label tiene mas sentido cuando se usa el intput type="text" ya que al hacer click en 
+la etiqueta es como si hicieras click dentro del  input, osea si haces click en la etiqueta nombre, 
+se hace foco en el input nombre.
+
+En un html insertar 3 barras de rangos:
+<input type="range" value="0" min="0" max="255" step="1">
+
+una para el color rojo, otra para el color verde y la ultima para el azul, y que cuando se
+muevan las barras cambie el color de fondo
+Dar un estilo atractivo y utilizar el complemento del color (255 - color) para cambiear 
+el fondo del contenedor de los inputs 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="ejercicio5.css">
+    
+</head>
+<body>
+
+    <div class="container-5">
+        <label for="rojo">Rojo</label>
+        <input type="range" id="rojo" value="0" min="0" max="255" step="1"><!--step para inciar en 1-->
+        <label for="verde">Verde</label>
+        <input type="range" id="verde" value="0" min="0" max="255" step="1">
+        <label for="azul">Azul</label>
+        <input type="range" id="azul" value="0" min="0" max="255" step="1">
+        <div class="color-preview"></div>
+    </div>
+
+    <script src="ejercicio5.js"></script>
+</body>
+</html>

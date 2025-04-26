@@ -1,182 +1,60 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Arial, Helvetica, sans-serif
 }
-
-body {
-    display: flex; /* Centrar el contenido horizontalmente */
-    flex-direction: column; /* Cambiar a columna para que la navegación esté arriba */
-    justify-content: center; /* Centrar el contenido verticalmente */
-    align-items: center; /* Centrar el contenido verticalmente */
-    height: 100vh; /* Asegurar que el cuerpo ocupe toda la altura de la ventana */
-    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
-    background-color: #f0f0f0; /* Color de fondo del cuerpo */
+.card-nav {
+    background: #fff; /* Fondo blanco para el card */
+    border-radius: 16px; /* Bordes redondeados */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12); /* Sombra para dar efecto de elevación */
+    padding: 32px 40px; /* Espaciado interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 320px;
 }
 
 .nav-ejercicios {
-    position: fixed; /* Fijar la navegación en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(52, 73, 94, 0.9); /* Fondo semi-transparente */
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 100; /* Asegurar que esté por encima de otros elementos */
-}
-
-.nav-ejercicios a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 8px 15px;
-    border-radius: 5px;
-    background-color: rgba(41, 128, 185, 0.7);
-    transition: all 0.3s ease;
-    font-weight: bold;
-}
-
-.nav-ejercicios a:hover {
-    background-color: rgba(41, 128, 185, 1);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.container {
-    margin-top: 80px; /* Espacio para la navegación fija */
-    background-color: white;
-}
-
-
-/* Ejercicio 1 */
-.cronometro {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 20px 0;
-    color: #2c3e50;
-    font-family: monospace;
-}
-
-.botones {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.botones button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
     align-items: center;
 }
 
-#iniciar {
-    background-color: #27ae60;
-    color: white;
-}
-
-#pausar {
-    background-color: #f39c12;
-    color: white;
-}
-
-#resetear {
-    background-color: #e74c3c;
-    color: white;
-}
-
-.botones button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Ejercicio 2 */
-
-form {
-    background-color: white;
-    padding: 20px;
+.nav-ejercicios a {
+    text-decoration: none;
+    color: #2980b9;
+    font-size: 1.2rem;
+    padding: 10px 24px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+.nav-ejercicios a:hover {
+    background: #2980b9;
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 2px 8px rgba(41,128,185,0.15);
 }
 
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
+/* Ajuste para centrar el card en la página */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
+/* Íconos FontAwesome dentro de los enlaces */
+.nav-ejercicios i {
+    font-size: 1.2em;
 }
 
-button:hover {
-    background-color: #45a049;
-}
 
-#mensaje {
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 4px;
-}
 
-.exito {
-    background-color: #dff0d8;
-    color: #3c763d;
-    border: 1px solid #d6e9c6;
-}
-
-.error {
-    background-color: #f2dede;
-    color: #a94442;
-    border: 1px solid #ebccd1;
-}
-
-/* Estilos para el textarea del ejercicio 3 */
-#textarea {
-    width: 300px; /* Ancho aumentado para mejor visualización */
-    height: 150px; /* Alto aumentado para mejor visualización */
-    border: 2px solid #3498db; /* Borde más grueso y con color */
-    border-radius: 10px; /* Bordes redondeados */
-    font-weight: bold; /* Texto en negrita como pide la consigna */
-    font-style: italic; /* Texto en cursiva como pide la consigna */
-    text-decoration: underline; /* Texto subrayado como pide la consigna */
-    font-size: 25px; /* Tamaño de texto como pide la consigna */
-    color: #e74c3c; /* Color rojo más atractivo */
-    padding: 15px; /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
-    outline: none; /* Eliminar el contorno al hacer focus */
-}
-
-#textarea:focus {
-    border-color: #2980b9; /* Cambio de color al enfocar */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al enfocar */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 500px;
-    width: 90%;
-}
 
