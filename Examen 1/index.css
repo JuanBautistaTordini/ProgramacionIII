@@ -1,0 +1,167 @@
+body {
+    display: flex; /* Centrar el contenido horizontalmente */
+    flex-direction: column; /* Cambiar a columna para que la navegación esté arriba */
+    justify-content: center; /* Centrar el contenido verticalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+    height: 100vh; /* Asegurar que el cuerpo ocupe toda la altura de la ventana */
+    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
+    background-color: #f0f0f0; /* Color de fondo del cuerpo */
+}
+
+.nav-ejercicios {
+    position: fixed; /* Fijar la navegación en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(52, 73, 94, 0.9); /* Fondo semi-transparente */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100; /* Asegurar que esté por encima de otros elementos */
+}
+
+.nav-ejercicios a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: rgba(41, 128, 185, 0.7);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.nav-ejercicios a:hover {
+    background-color: rgba(41, 128, 185, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    margin-top: 60px; /* Espacio para la navegación fija */
+}
+
+/* <!--
+Ejercicio 1 
+
+Crea una pagina HTML con un boton centrado. Al hacer clic en el botón, el color de fondo 
+de la página debe cambiar aleatoriamente a un color. Usa al menos 5 colores diferentes. Aplica estilos con CSS
+para que el botón sea visualmente atractivo.
+-->
+ */
+
+button {
+    padding: 10px 20px; /* Ajusta el relleno del botón según tus preferencias */
+    font-size: 16px; /* Ajusta el tamaño de fuente del botón según tus preferencias */
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* <!--Ejercicio 2: Crea una Pagina con un formulario que contenga un solo campo de texto: "Nombre". Si el campo
+está vacío, muestra unmensaje de error en rojo debajo del forumilario. Si está copleto, muestra un alert
+con mensaje de éxito. no recargues la pagina. Aplica estilos para centrar los elementos.--> */
+
+.formulario {
+    display: flex; /* Usamos flexbox para organizar los elementos */
+    flex-direction: column; /* Organizamos los elementos en columna */
+    align-items: center; /* Centramos horizontalmente los elementos */
+    width: 300px; /* Ancho fijo para el formulario */
+    margin: 0 auto; /* Centramos el formulario en la página */
+    padding: 20px; /* Espacio interno */
+    background-color: white; /* Fondo blanco para el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para las etiquetas del formulario */
+.formulario label {
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo para el campo de texto */
+.formulario input[type="text"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 10px; /* Espacio debajo del campo */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilo para el mensaje de error */
+.error {
+    color: red; /* Texto en rojo */
+    font-size: 14px; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Espacio debajo del mensaje */
+    text-align: center; /* Texto centrado */
+    width: 100%; /* Ancho completo */
+    min-height: 20px; /* Altura mínima para evitar saltos en la interfaz */
+}
+
+
+/* Estilos para el Ejercicio 3 - Contador */
+#contador {
+    font-size: 72px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    transition: all 0.3s ease;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#sumar, #restar, #reiniciar {
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#sumar {
+    background-color: #27ae60; /* Verde */
+}
+
+#sumar:hover {
+    background-color: #219653;
+}
+
+#restar {
+    background-color: #e74c3c; /* Rojo */
+}
+
+#restar:hover {
+    background-color: #c0392b;
+}
+
+#reiniciar {
+    background-color: #f39c12; /* Naranja */
+}
+
+#reiniciar:hover {
+    background-color: #d35400;
+}
+

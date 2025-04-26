@@ -1,0 +1,68 @@
+<!-- 
+Crea una pagina con un contador visible. Debajo, tres botones, uno para sumar, 
+otro para restar y otro paa reiniciar. 
+El numero debe de actualizarse en pantalla cada vez que se precione un boton. 
+Estiliza correctamente el diseño
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="nav-ejercicios">
+        <!--Ejercicios 1, 2, 3-->
+        <a href="index.html">Ejercicio 1</a>
+        <a href="Ejercicio2.html">Ejercicio 2</a>
+        <a href="Ejercicio3.html">Ejercicio 3</a>
+    </nav>
+    
+    <div class="container">
+        <h1>Contador</h1>
+        <div id="contador">0</div>
+        <div class="buttons">
+            <button id="sumar">+</button>
+            <button id="restar">-</button>
+            <button id="reiniciar">Reiniciar</button>
+        </div>
+    </div>
+
+    <script>
+        // Obtener el elemento del contador y los botones
+        const contador = document.getElementById('contador');
+        const btnSumar = document.getElementById('sumar');
+        const btnRestar = document.getElementById('restar');
+        const btnReiniciar = document.getElementById('reiniciar');
+        
+        // Variable para almacenar el valor actual del contador
+        let valorContador = 0;
+        
+        // Función para actualizar el valor mostrado en pantalla
+        function actualizarContador() {
+            contador.textContent = valorContador;
+        }
+        
+        // Evento para el botón sumar
+        btnSumar.addEventListener('click', function() {
+            valorContador++; // Incrementa el contador en 1
+            actualizarContador(); // Actualiza el valor en pantalla
+        });
+        
+        // Evento para el botón restar
+        btnRestar.addEventListener('click', function() {
+            valorContador--; // Decrementa el contador en 1
+            actualizarContador(); // Actualiza el valor en pantalla
+        });
+        
+        // Evento para el botón reiniciar
+        btnReiniciar.addEventListener('click', function() {
+            valorContador = 0; // Reinicia el contador a 0
+            actualizarContador(); // Actualiza el valor en pantalla
+        });
+    </script>
+</body>
+</html>

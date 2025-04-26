@@ -1,0 +1,45 @@
+<!--
+Ejercicio 1 
+
+Crea una pagina HTML con un boton centrado. Al hacer clic en el botón, el color de fondo 
+de la página debe cambiar aleatoriamente a un color. Usa al menos 5 colores diferentes. Aplica estilos con CSS
+para que el botón sea visualmente atractivo.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="nav-ejercicios">
+        <!--Ejercicios 1, 2, 3-->
+        <a href="index.html">Ejercicio 1</a>
+        <a href="Ejercicio2.html">Ejercicio 2</a>
+        <a href="Ejercicio3.html">Ejercicio 3</a>
+    </nav>
+    <div class="container">
+        <button id="btn">Cambiar color</button>
+    </div>
+    <script>
+        // Obtener el <button> por medio de su iD
+        let btn = document.getElementById("btn");
+        
+        // Crea un arreglo con nombres de colores que se usarán para el fondo
+        let colores = ["red", "blue", "green", "yellow", "purple"];
+        
+        // event listener al botón que se capturó anteriormente para "escuchar" clics
+        btn.addEventListener("click", function(){
+            // Genera un índice aleatorio basado en la longitud del arreglo de colores
+            // elige un número aleatorio entre 0 y la longitud del arreglo(5) - 1
+            let random = Math.floor(Math.random() * colores.length);
+            
+            // Cambia el color de fondo del body al color seleccionado aleatoriamente
+            document.body.style.backgroundColor = colores[random];
+        });
+    </script>
+</body>
+</html>

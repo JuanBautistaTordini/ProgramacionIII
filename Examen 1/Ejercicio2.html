@@ -1,0 +1,43 @@
+<!--Ejercicio 2: Crea una Pagina con un formulario que contenga un solo campo de texto: "Nombre". Si el campo
+está vacío, muestra unmensaje de error en rojo debajo del forumilario. Si está copleto, muestra un alert
+con mensaje de éxito. no recargues la pagina. Aplica estilos para centrar los elementos.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+    <link rel="stylesheet" href="index.css">
+</head> 
+<body>
+    <nav class="nav-ejercicios">
+        <!--Ejercicios 1, 2, 3-->
+        <a href="index.html">Ejercicio 1</a>
+        <a href="Ejercicio2.html">Ejercicio 2</a>
+        <a href="Ejercicio3.html">Ejercicio 3</a>
+    </nav>
+    
+    <div class="container">
+        <form id="formulario" class="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre">
+            <span id="error" class="error"></span>
+            <button type="button" onclick="validarFormulario()">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value; //obtener el valor de "nombre"
+            var error = document.getElementById("error"); //obtener el elemento con el id "error"
+
+            if (nombre === "") { //si el campo "nombre" es vacio
+                error.textContent = "El campo nombre es obligatorio"; //mostrar el mensaje de error
+            } else {
+                alert("¡Formulario enviado con éxito!"); //mostrar un mensaje de éxito
+                error.textContent = ""; //limpiar el mensaje de error
+            }
+        }
+    </script>
+</body>
+</html>
