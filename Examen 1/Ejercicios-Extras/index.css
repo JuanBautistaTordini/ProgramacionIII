@@ -44,13 +44,8 @@ body {
 .container {
     margin-top: 80px; /* Espacio para la navegación fija */
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 500px;
-    width: 90%;
 }
+
 
 /* Ejercicio 1 */
 .cronometro {
@@ -157,3 +152,31 @@ button:hover {
     color: #a94442;
     border: 1px solid #ebccd1;
 }
+
+/* Estilos para el textarea del ejercicio 3 */
+#textarea {
+    width: 300px; /* Ancho aumentado para mejor visualización */
+    height: 150px; /* Alto aumentado para mejor visualización */
+    border: 2px solid #3498db; /* Borde más grueso y con color */
+    border-radius: 10px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita como pide la consigna */
+    font-style: italic; /* Texto en cursiva como pide la consigna */
+    text-decoration: underline; /* Texto subrayado como pide la consigna */
+    font-size: 25px; /* Tamaño de texto como pide la consigna */
+    color: #e74c3c; /* Color rojo más atractivo */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
+    outline: none; /* Eliminar el contorno al hacer focus */
+}
+
+#textarea:focus {
+    border-color: #2980b9; /* Cambio de color al enfocar */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al enfocar */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+

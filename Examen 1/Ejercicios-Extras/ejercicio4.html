@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Word Mejorado</title>
+    <link rel="stylesheet" href="ejercicio4.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav-ejercicios">
+        <a href="index.html">Ejercicio 1</a>
+        <a href="ejercicio2.html">Ejercicio 2</a>
+        <a href="ejercicio3.html">Ejercicio 3</a>
+        <a href="ejercicio4.html">Ejercicio 4</a>
+        <a href="ejercicio4.html">Ejercicio 5</a>
+        <a href="ejercicio4.html">Ejercicio 6</a>
+        <a href="ejercicio4.html">Ejercicio 7</a>
+        <a href="ejercicio4.html">Ejercicio 8</a>
+    </nav>
+    
+    <div class="container-4">
+        <div class="toolbar">
+            <div class="toolbar-group">
+                <button id="btn-negrita" title="Negrita"><span class="material-icons">format_bold</span></button>
+                <button id="btn-cursiva" title="Cursiva"><span class="material-icons">format_italic</span></button>
+                <button id="btn-subrayado" title="Subrayado"><span
+                        class="material-icons">format_underlined</span></button>
+            </div>
+            <div class="toolbar-group">
+                <label for="color-texto">Color</label>
+                <input type="color" id="color-texto" value="#000000">
+            </div>
+            <div class="toolbar-group">
+                <label for="tamano-fuente">Tamaño</label>
+                <input type="number" id="tamano-fuente" min="8" max="72" value="16">
+            </div>
+            <div class="toolbar-group">
+                <label for="selector-fuente">Fuente</label>
+                <select id="selector-fuente">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                </select>
+            </div>
+        </div>
+        <textarea id="editor"
+            placeholder="Escribe aquí tu texto...">Texto de ejemplo para editar. Prueba las diferentes opciones de formato.</textarea>
+    </div>
+    <script src="ejercicio4.js"></script>
+</body>
+
+</html>
